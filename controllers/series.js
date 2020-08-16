@@ -47,7 +47,7 @@ function showSerie(req,res){
     let series = req.body.series;
     return res.send({series});
 }
-let series
+
 
 function deleteSerie(req,res){
     if(!req.body.series) return res.send({message: 'No se encuentra el objeto con los datos especificados'});
