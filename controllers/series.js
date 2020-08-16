@@ -48,11 +48,11 @@ function showSerie(req,res){
     return res.send({series});
 }
 
-
 function deleteSerie(req,res){
     if(!req.body.series) return res.send({message: 'No se encuentra el objeto con los datos especificados'});
     let series= req.body.series[0].remove().then(series => res.status(200).send({message: 'Eliminado', series})).catch(error=>status(500).send({error}));
 }
+
 
 
 module.exports.createSerie = createSerie;
