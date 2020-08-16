@@ -62,6 +62,6 @@ module.exports.deleteSerie = deleteSerie;
 module.exports.updateSerie = updateSerie;
 module.exports.showSerie = showSerie;
 module.exports.findSerie = findSerie;
-JNJBJBJK
+
 
 
