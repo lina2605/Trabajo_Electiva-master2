@@ -2,28 +2,36 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const seriesSchema = new Schema({
-
 	id:{
 		type: Number,
 		unique: true
 	},
 	titulo:{
-        type: String
-        //required:true
+        type: String,
+        required:true
     },
     director:{ 
-		type: String
-		//required:true
-    },
-    capitulos:{
-		type: Number
-		//required:true
+		type: String,
+		required:true
 	},
+	//Agregar un identificar para poder modificar bien los campos dentro del objeto
 	actores:{  // objeto actores
-		nombre: String,  
-		apellidos: String,
-		edad: Number,
-        ciudad: String
+		nombre: {
+			type : String,
+			
+		},  
+		apellidos:{
+			type: String,
+			
+		} ,
+		edad: {
+			type: Number,
+			
+		},
+		ciudad: {
+			type: String,
+			
+		}
         //required: true
     },
     genero:{
@@ -38,7 +46,8 @@ const seriesSchema = new Schema({
 	resumen:{
 		type: String
 		//required:true
-    },
+	},
+	//cambiar numeroTemporada y agregar id
     temporadas:{ // objeto temporadas
         numeroTemporadas: Number,
         capitulos: Number,
